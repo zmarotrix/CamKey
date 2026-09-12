@@ -1,0 +1,11 @@
+# A text field displayed in the mod UI
+credits="Developed for the CatFace/Aphmau Technical Assessment."
+
+# The authors of the mod, displayed in the mod UI (optional)
+authors="MARO"
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+A lightweight cinematic camera keyframe and playback tool. 
+Built to allow Production Associates to easily capture spatial keyframes and execute smooth, frame-interpolated camera sweeps during live recording sessions.
+'''

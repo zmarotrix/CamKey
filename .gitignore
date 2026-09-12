@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+
+# Minecraft Run Data
+run/
+logs/
+
+# Visual Studio / IDE Caches
+.vs/
+*.user
+*.suo
+*.userprefs
+*.sln
+*.csproj
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# Compiled Java Classes
+*.class
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
