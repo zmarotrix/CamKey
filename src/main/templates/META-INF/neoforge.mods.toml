@@ -1,11 +1,28 @@
-# A text field displayed in the mod UI
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 credits="Developed for the CatFace/Aphmau Technical Assessment."
-
-# The authors of the mod, displayed in the mod UI (optional)
 authors="MARO"
-
-# The description text for the mod (multi line!) (#mandatory)
 description='''
 A lightweight cinematic camera keyframe and playback tool. 
 Built to allow Production Associates to easily capture spatial keyframes and execute smooth, frame-interpolated camera sweeps during live recording sessions.
 '''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

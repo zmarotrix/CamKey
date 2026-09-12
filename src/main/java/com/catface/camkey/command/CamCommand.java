@@ -113,6 +113,28 @@ public class CamCommand {
                     })
                 )
             )
+
+            // ---------------------------------------------------------
+            // COMMAND: /camkey delete <sequence_name>
+            // Purpose: Deletes a sequence from memory and disk.
+            // ---------------------------------------------------------
+            .then(Commands.literal("delete")
+                .then(Commands.argument("sequence", StringArgumentType.word())
+                    .executes(context -> {
+                        String seqName = StringArgumentType.getString(context, "sequence");
+                        
+                        boolean success = SequenceStorage.deleteSequence(seqName);
+                        if (success) {
+                            context.getSource().sendSuccess(() -> Component.literal("Successfully deleted sequence '" + seqName + "'"), false);
+                        } else {
+                            // Production readiness: Graceful failure if they typo the name
+                            context.getSource().sendFailure(Component.literal("Sequence '" + seqName + "' does not exist."));
+                        }
+                        
+                        return 1;
+                    })
+                )
+            )
             
             // ---------------------------------------------------------
             // COMMAND: /camkey play <sequence_name> <duration_seconds>
